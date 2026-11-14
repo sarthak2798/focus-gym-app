@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#1D1B18" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="description" content="Short, adaptive daily training for focus, speed and memory." />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Focus Gym" />
+    <link rel="icon" href="/focus-gym-app/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/focus-gym-app/apple-touch-icon.png" />
+    <title>Focus Gym</title>
+    <script>
+      // Apply the saved theme before first paint so there is no flash of the wrong theme.
+      (function () {
+        try {
+          var s = JSON.parse(localStorage.getItem('fg.settings') || '{}');
+          var t = s.theme || 'dark';
+          if (t === 'system') t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          document.documentElement.dataset.theme = t;
+        } catch (e) {}
+      })();
+    </script>
+    <script type="module" crossorigin src="/focus-gym-app/assets/index-DHFpz6Ck.js"></script>
+    <link rel="modulepreload" crossorigin href="/focus-gym-app/assets/react-BjjchIm0.js">
+    <link rel="modulepreload" crossorigin href="/focus-gym-app/assets/dexie-BCdwUIry.js">
+    <link rel="modulepreload" crossorigin href="/focus-gym-app/assets/motion-CQI-QFja.js">
+    <link rel="stylesheet" crossorigin href="/focus-gym-app/assets/index-MdEWl-Wh.css">
+  <link rel="manifest" href="/focus-gym-app/manifest.webmanifest"></head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
